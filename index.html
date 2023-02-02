@@ -29,33 +29,34 @@
           <div class="top">
             <div class="field">
               <label for="first_name">First Name</label>
-              <input type="text" name="first_name" id="first_name" required>
+              <div class="checking"><input type="text" name="first_name" id="first_name" required><span></span></div>
             </div>
             <div class="field">
               <label for="">Last Name</label>
-              <input type="text" name="last_name" id="last_name" required>
+              <div class="checking"><input type="text" name="last_name" id="last_name" required><span></span></div>
             </div>
           </div>
             <div class="mid">
               <div class="field">
                 <label for="">E-Mail</label>
-                <input type="email" name="email" id="email" required>
+                <div class="checking"><input type="email" name="email" id="email" required><span></span></div>
               </div>
               <div class="field">
                 <label for="phone">Phone Number</label>
-                <input type="tel" name="phone" id="phone" pattern="[\d\+]*" 
-                title="Please enter a phone number using only numbers and + sign">
+                <div class="checking">
+                  <input type="tel" name="phone" id="phone" pattern="[\d\+]*"
+                  title="Please enter a phone number using only numbers and + sign" required><span></span>
+                </div>
               </div>
             </div>
             <div class="bottom">
               <div class="field">
                 <label for="pass">Password</label>
-                <input type="password" name="pass" id="pass" required>
-                <div class="information"></div>
+                <div class="pwdcheck"><input type="password" name="pass" id="pass" required><div class="information"></div></div>
               </div>
               <div class="field">
                 <label for="">Confirm Password</label>
-                <input type="password" name="confirm" id="confirm" required>
+                <div class="pwdcheck"><input type="password" name="confirm" id="confirm" required></div>
               </div>
             </div>
         </div>
@@ -81,6 +82,7 @@
     }
 
     conf.addEventListener("focusout", checkmatch)
+    pwd.addEventListener("focusout", checkmatch)
   </script>
 </body>
 </html>
