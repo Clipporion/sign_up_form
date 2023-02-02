@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "Odin";
+  src: url(./Norse-Bold.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(39, 41, 41);
+  display: flex;
+  justify-content: center;
+  color: rgb(56, 55, 55)
+}
+
+.content {
+  display: flex;
+  width: 80vw;
+}
+
+.odin_title {
+  font-family: "Odin";
+}
+
+.left {
+  height: 100vh;
+  width: 35%;
+  background-image: url(./halie-west-25xggax4bSA-unsplash.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.logo {
+  background-color: rgba(30,30,30, .5);
+  position: absolute;
+  top: 25vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 5vw;
+  margin: 0;
+  padding: 10px 0px;
+}
+
+.credits {
+  position: absolute;
+  bottom: 10px;
+  color: white;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+img {
+  width: 5vw;
+  height: auto;
+}
+
+.right {
+  background-color: hsl(0, 0%, 98%);
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.head,
+.main,
+.foot {
+  flex: 1 1 300px;
+  padding: 5vh 5vw;
+  display: flex;
+}
+
+.head {
+  font-size: max(1.5vw, 24px);;
+  font-weight: 900;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.header_title,
+h1 {
+  margin-bottom: 3vh;
+}
+
+h1 {
+  font-size: max(1.5vw, 24px);
+}
+
+.main {
+  background-color: white;
+  box-shadow: 0px 3px 5px grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.top,
+.mid,
+.bottom {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: max(15vw, 180px);
+}
+
+label {
+  font-size: .8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+label::after {
+  content: "*";
+  color: red;
+}
+
+input {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid blue;
+  box-shadow: 1px 1px 2px grey;
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  height: 50px;
+  width: 200px;
+  background-color: #596D48;
+  color: white;
+  font-family: Odin;
+  font-size: max(1.5vw, 24px);
+  border-radius: 10px;
+  margin-bottom: 2vw;
+}
+
+.error {
+  border: 1px solid red;
+  position: relative;
+}
+
+.error + .information::after {
+  content: "Passwords don't match";
+  color: red;
+  font-size: .8rem;
+}
